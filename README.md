@@ -2,15 +2,15 @@
 ## A SDL2 wrapper
 
 ### DISCLAIMER:
-```
+
 I do not claim to own or have written the contents of "include.zip" and "lib.zip". These files contain the current (22.10.2023) versions of the following libraries:
-SDL2
-SDL2_image
-SDL2_mixer
-SDL2_ttf
+- SDL2
+- SDL2_image
+- SDL2_mixer
+- SDL2_ttf
 
 Please extract the .zip files before usage as they are neccessary. (As you can see in the "compiling" section)
-```
+
 
 
 
