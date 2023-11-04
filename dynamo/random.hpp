@@ -3,7 +3,7 @@
 
 #include "dynamo.hpp"
 
-class Random {
+struct Random {
     int randint(int x, int y);
     double random();
 };

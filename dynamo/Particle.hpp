@@ -13,7 +13,6 @@ public:
     customPair<int, int> position;
     customPair<double, double> scale;
     customPair<int, int> velocity;
-    customPair<int, int> accelleration;
     customPair<double, double> scaleDecay;
     double rotationAngleDecay;
     int initialCtr;
@@ -21,8 +20,8 @@ public:
 
     Texture* tex = nullptr;
 
-    Particle(RenderWindow* win, const char* textureFile, customPair<int, int> pos, customPair<double, double> initialScale, double initialRotation, customPair<int, int> vel, customPair<int, int> acc, customPair<double, double> _scaleDecay, double rotationDecay, int initialTransparencyCtr);
-    Particle(RenderWindow* win, const char* spriteSheetFile, customPair<int, int> spriteSheetPosition, customPair<int, int> spriteSheetSpriteDimensions, customPair<int, int> pos, customPair<double, double> initialScale, double initialRotation, customPair<int, int> vel, customPair<int, int> acc, customPair<double, double> _scaleDecay, double rotationDecay, int initialTransparencyCtr);
+    Particle(RenderWindow* win, const char* textureFile, customPair<int, int> pos, customPair<double, double> initialScale, double initialRotation, customPair<int, int> vel, customPair<double, double> _scaleDecay, double rotationDecay, int initialTransparencyCtr);
+    Particle(RenderWindow* win, const char* spriteSheetFile, customPair<int, int> spriteSheetPosition, customPair<int, int> spriteSheetSpriteDimensions, customPair<int, int> pos, customPair<double, double> initialScale, double initialRotation, customPair<int, int> vel, customPair<double, double> _scaleDecay, double rotationDecay, int initialTransparencyCtr);
     void render();
     void decay();
     ~Particle();

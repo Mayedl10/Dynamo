@@ -1,14 +1,13 @@
 #include "dynamo.hpp"
 
 Particle::Particle(RenderWindow* win, const char* textureFile, customPair<int, int> pos, customPair<double, double> initialScale, double initialRotation, customPair<int, int> vel,
-                    customPair<int, int> acc, customPair<double, double> _scaleDecay, double rotationDecay, int initialTransparencyCtr) {
+                    customPair<double, double> _scaleDecay, double rotationDecay, int initialTransparencyCtr) {
     window = win;
     tex = new Texture(window, textureFile);
     position = pos;
     scale = initialScale;
     rotationAngle = initialRotation;
     velocity = vel;
-    accelleration = acc;
     scaleDecay = _scaleDecay;
     rotationAngleDecay = rotationDecay;
     transparencyCtr = initialTransparencyCtr;
@@ -18,7 +17,7 @@ Particle::Particle(RenderWindow* win, const char* textureFile, customPair<int, i
 
 
 Particle::Particle(RenderWindow* win, const char* spriteSheetFile, customPair<int, int> spriteSheetPosition, customPair<int, int> spriteSheetSpriteDimensions,
-                    customPair<int, int> pos, customPair<double, double> initialScale, double initialRotation, customPair<int, int> vel, customPair<int, int> acc,
+                    customPair<int, int> pos, customPair<double, double> initialScale, double initialRotation, customPair<int, int> vel,
                     customPair<double, double> _scaleDecay, double rotationDecay, int initialTransparencyCtr) {
     window = win;
 
@@ -28,7 +27,6 @@ Particle::Particle(RenderWindow* win, const char* spriteSheetFile, customPair<in
     scale = initialScale;
     rotationAngle = initialRotation;
     velocity = vel;
-    accelleration = acc;
     scaleDecay = _scaleDecay;
     rotationAngleDecay = rotationDecay;
     transparencyCtr = initialTransparencyCtr;
@@ -49,10 +47,6 @@ void Particle::decay() {
     scale.second *= scaleDecay.second;
 
     rotationAngle -= rotationAngleDecay;
-
-    velocity.first += accelleration.first;
-    velocity.second += accelleration.second;
-
 
     transparencyCtr--;
     if (transparencyCtr > 0) {
