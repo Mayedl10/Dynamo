@@ -214,7 +214,7 @@ Methodes:
 
 Note: The member variable `int frameCounter` is incremented every time `tick` is called. This variable gets set to 0 if it is > targetedFramerate. It is not used inside the class so it won't break anything if you try to access/modify it. Think of it as counter you can use.
 
-### The Random class
+### The Random struct
 This class could just be a namespace but I like OOP so you get it as a class.
 
 Constructor parameters:
