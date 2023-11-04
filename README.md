@@ -135,7 +135,6 @@ Constructor parameters (overloaded):
   - customPair<double, double> initialScale - initial scale of the particle.
   - double initialRotation - initial rotation of the particle.
   - customPair<int, int> vel - initial velocity of the particle.
-  - customPair<int, int> acc - accelleration of the particle.
   - customPair<double, double> _scaleDecay - how the scale changes when calling `decay`
   - double rotationDecay - How much the rotation angle is reduced by when calling `decay` 
   - int initialTransparencyCtr - how many times you can call `decay` before the particle is invisible.
@@ -150,7 +149,6 @@ Methodes:
     position += velocity
     scale *= scaleDecay
     rotationAngle -= rotationAngleDecay
-    velocity += accelleration
     transparencyCtr--;
     if (transparencyCtr > 0) {
         tex->setAlpha(initialCtr, transparencyCtr);
